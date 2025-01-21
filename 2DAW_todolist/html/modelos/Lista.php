@@ -2,6 +2,8 @@
 
     require_once "database/Database.php" ;
 
+    use Database\Database ;
+
     /**
      * Modelo LISTA
      */

@@ -1,5 +1,11 @@
 <?php
 
+    namespace Database ;
+
+    use PDO;
+    use PDOException;
+    use PDOStatement;
+
     class Database 
     {
         private static ?Database $instancia = null ;
