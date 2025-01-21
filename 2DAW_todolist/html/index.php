@@ -4,6 +4,8 @@
 
     require_once "excepciones/MVCException.php" ;
 
+    use Excepciones\MVCException;
+
     # echo "<pre>".print_r($datos, true)."</pre>" ;
 
     # Controlador Frontal
@@ -26,6 +28,3 @@
     if (method_exists($controlador, $metodo)) $controlador->$metodo() ;
     else
         throw new MVCException("Se ha producido un fallo accediendo al controlador.") ;
-
-
- 

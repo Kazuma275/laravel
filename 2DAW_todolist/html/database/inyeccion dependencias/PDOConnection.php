@@ -1,5 +1,11 @@
 <?php
 
+    namespace Database\PDOConection ;
+
+    use PDO;
+    use PDOException;
+    use PDOStatement;
+
     class PDOConnection implements DatabaseConnectorInterface
     {
         private PDO $pdo ;

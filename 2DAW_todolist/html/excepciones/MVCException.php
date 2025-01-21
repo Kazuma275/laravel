@@ -1,6 +1,8 @@
 <?php
 
-    class MVCException extends Exception 
+    namespace Exception ;
+
+    class MVCException extends \Exception 
     {
         
     }
