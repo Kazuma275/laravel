@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <title>Tareas de la Lista</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tareas de la Lista</h1>
+        <a class="btn btn-primary mt-4 mb-4" href="/crear/tarea/{{ lista.id }}">
+            <i class="bi bi-plus-circle-fill"></i> Crear Tarea
+        </a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Fecha</td>
+                    <td>Texto</td>
+                    <td>Completada</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for tarea in tareas %}
+                <tr>
+                    <td>{{ tarea.fecha }}</td>
+                    <td>{{ tarea.texto }}</td>
+                    <td>{{ tarea.completada ? 'Sí' : 'No' }}</td>
+                    <td>
+                        <a href="/editar/tarea/{{ tarea.id }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+                        <a href="/borrar/tarea/{{ tarea.id }}" class="btn btn-danger"><i class="bi bi-trash"></i> Borrar</a>
+                        {% if not tarea.completada %}
+                        <a href="/completar/tarea/{{ tarea.id }}" class="btn btn-success"><i class="bi bi-check-circle"></i> Completar</a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

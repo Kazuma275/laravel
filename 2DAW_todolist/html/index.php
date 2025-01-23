@@ -4,8 +4,6 @@
 
     require_once "excepciones/MVCException.php" ;
 
-    use Excepciones\MVCException;
-
     # echo "<pre>".print_r($datos, true)."</pre>" ;
 
     # Controlador Frontal

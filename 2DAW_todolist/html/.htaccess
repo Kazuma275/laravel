@@ -4,3 +4,8 @@ RewriteRule ^$                          index.php?mo=lista&op=list            [Q
 RewriteRule ^crear/lista$               index.php?mo=lista&op=create          [QSA,L]
 RewriteRule ^borrar/lista/([1-9]+)$     index.php?mo=lista&op=delete&id=$1    [QSA,L]
 RewriteRule ^editar/lista/([1-9]+)$     index.php?mo=lista&op=update&id=$1    [QSA,L]
+RewriteRule ^tareas/([1-9]+)$           index.php?mo=tarea&op=list&id=$1      [QSA,L]
+RewriteRule ^crear/tarea/([1-9]+)$      index.php?mo=tarea&op=create&idLis=$1 [QSA,L]
+RewriteRule ^borrar/tarea/([1-9]+)$     index.php?mo=tarea&op=delete&id=$1    [QSA,L]
+RewriteRule ^editar/tarea/([1-9]+)$     index.php?mo=tarea&op=update&id=$1    [QSA,L]
+RewriteRule ^completar/tarea/([1-9]+)$  index.php?mo=tarea&op=complete&id=$1  [QSA,L]

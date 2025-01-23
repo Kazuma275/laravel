@@ -8,23 +8,27 @@
     <title>TodoList</title>
 </head>
 <body>
-    
     <div class="container">
         <h1>TodoList</h1>
-
-        <form method="POST">
-            
-            <div class="row">
-                <div class="col-4">
-                    <input class="form-control" type="text" name="nombre" required autofocus />
-                </div>
-                <div class="col-8">
-                    <button class="btn btn-primary" >Guardar</button>
-                    <a class="btn btn-danger" href="http://localhost">Cancelar</a>
-                </div>
+        <form method="post" action="/crear/tarea/{{ idLis }}">
+            <input type="hidden" name="idLis" value="{{ idLis }}">
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" required>
             </div>
+            <div class="mb-3">
+                <label for="texto" class="form-label">Texto</label>
+                <textarea class="form-control" id="texto" name="texto" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="completada" class="form-label">Completada</label>
+                <select class="form-control" id="completada" name="completada" required>
+                    <option value="0">No</option>
+                    <option value="1">Sí</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear</button>
         </form>
     </div>
-
 </body>
 </html>
