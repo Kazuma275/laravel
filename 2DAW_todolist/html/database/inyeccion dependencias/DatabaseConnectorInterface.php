@@ -1,5 +1,6 @@
 <?php
 
+    namespace Database;
 
     interface DatabaseConnectorInterface {
 

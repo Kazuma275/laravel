@@ -1,20 +1,21 @@
 <?php
 
     # Controlador FRONTAL
-
-    require_once "excepciones/MVCException.php" ;
-
+    require_once __DIR__ . '/vendor/autoload.php';
+    
+    use Exception\MVCException;
     # echo "<pre>".print_r($datos, true)."</pre>" ;
-
+    
     # Controlador Frontal
     $metodo = $_GET["op"]??"list" ;
     $modelo = $_GET["mo"]??"lista" ;
-
+    
     # construimos el nombre del controlador
     $nombreControlador = "{$modelo}Controller" ;
-
+    
     # importamos el controlador
     $ruta = "controladores/{$nombreControlador}.php" ;
+
     if (file_exists($ruta)) require_once $ruta ;
     else
         throw new MVCException("Se ha producido un fallo accediendo al controlador.") ;

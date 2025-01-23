@@ -1,8 +1,9 @@
 <?php
 
 require_once "BaseController.php";
-require_once __DIR__ . '/../modelos/Lista.php'; // Usa __DIR__ para obtener el directorio actual
+require_once __DIR__ . '/../modelos/Lista.php';
 require_once __DIR__ . '/../modelos/Tarea.php';
+
 
 /**
  * Controlador TAREA
@@ -31,7 +32,7 @@ class TareaController extends BaseController
         if (empty($_POST)):
             $this->render("tareas/crear.php.twig", ["idLis" => $idLis]);
         else:
-            // Verifica que los datos del formulario están presentes antes de llamar a Tarea::save
+            // Verifica que los datos del formulario se pasen antes de guardarlos
             if (isset($_POST["idLis"], $_POST["fecha"], $_POST["texto"], $_POST["completada"])) {
                 Tarea::save((int)$_POST["idLis"], $_POST["fecha"], $_POST["texto"], (int)$_POST["completada"]);
                 die(header("location: /tareas/$idLis"));

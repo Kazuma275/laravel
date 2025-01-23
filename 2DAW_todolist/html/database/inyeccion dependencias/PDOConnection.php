@@ -2,6 +2,7 @@
 
     namespace Database\PDOConection ;
 
+    use Database\DatabaseConnectorInterface;
     use PDO;
     use PDOException;
     use PDOStatement;

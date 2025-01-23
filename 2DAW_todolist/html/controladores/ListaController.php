@@ -2,7 +2,8 @@
 
     require_once "BaseController.php" ;
     require_once "modelos/Lista.php" ;
- 
+
+    
     /**
      * Controlador LISTA
      */
@@ -32,8 +33,8 @@
 
                 Lista::save($_POST["nombre"]) ;
 
-                 # redirigir a la pantalla principal
-                 die(header("location: http://localhost")) ;
+                # redirigir a la pantalla principal
+                die(header("location: http://localhost")) ;
             endif ;
         }
 
