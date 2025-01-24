@@ -1,6 +1,6 @@
 <?php
 
-    require_once "database/Database.php" ;
+    namespace Modelos ;
 
     use Database\Database ;
 
@@ -79,7 +79,7 @@
             $sql = "SELECT * FROM lista WHERE idLis = :id;" ;
             return Database::init()->prepare($sql)
                                    ->query([":id" => $id])
-                                   ->one("Lista") ;
+                                   ->one("Modelos\\Lista") ;
         }
 
         /**
@@ -91,7 +91,7 @@
             #$db = new Database(new MYSQLIConnection) ;
             return Database::init()->prepare("SELECT * FROM lista ;")
                                    ->query()
-                                   ->all("Lista") ;
+                                   ->all("Modelos\\Lista") ;
         }
     }
     

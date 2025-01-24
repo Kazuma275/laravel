@@ -1,8 +1,8 @@
 <?php
 
-    require_once "BaseController.php" ;
-    require_once "modelos/Lista.php" ;
+    namespace Controladores ;
 
+    use Modelos\Lista;
     
     /**
      * Controlador LISTA

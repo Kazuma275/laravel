@@ -1,6 +1,6 @@
 <?php
 
-    require_once "vendor/autoload.php" ;
+    namespace Controladores ;
 
     abstract class BaseController 
     {

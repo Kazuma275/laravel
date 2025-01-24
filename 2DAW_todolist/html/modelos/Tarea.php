@@ -1,8 +1,8 @@
 <?php
 
-require_once "database/Database.php";
+    namespace Modelos;
 
-use Database\Database;
+    use Database\Database;
 
 /**
  * Modelo TAREA
@@ -135,7 +135,7 @@ class Tarea
         $sql = "SELECT * FROM tarea WHERE idTar = :id;";
         return Database::init()->prepare($sql)
                                ->query([":id" => $id])
-                               ->one("Tarea");
+                               ->one("Modelos\\Tarea");
     }
 
     /**
@@ -146,7 +146,7 @@ class Tarea
     {
         return Database::init()->prepare("SELECT * FROM tarea;")
                                ->query()
-                               ->all("Tarea");
+                               ->all("Modelos\\Tarea");
     }
         /**
      * Recupera todas las tareas asociadas a una lista específica
@@ -158,7 +158,7 @@ class Tarea
         $sql = "SELECT * FROM tarea WHERE idLis = :idLis;";
         return Database::init()->prepare($sql)
                                ->query([":idLis" => $idLis])
-                               ->all("Tarea");
+                               ->all("Modelos\\Tarea");
     }
 
     public static function complete(int $id): void
