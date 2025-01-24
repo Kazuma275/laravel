@@ -148,6 +148,7 @@ class Tarea
                                ->query()
                                ->all("Modelos\\Tarea");
     }
+
         /**
      * Recupera todas las tareas asociadas a una lista específica
      * @param int $idLis
@@ -161,18 +162,33 @@ class Tarea
                                ->all("Modelos\\Tarea");
     }
 
+        /**
+     * Completa las tarea asociada a una lista específica
+     * @param int $idLis
+     * @return array
+     */
     public static function complete(int $id): void
     {
         $sql = "UPDATE tarea SET completada = 1 WHERE idTar = :id;";
         Database::init()->prepare($sql)->query([":id" => $id]);
     }
 
+        /**
+     * Descompleta la tarea asociada a una lista específica
+     * @param int $idLis
+     * @return array
+     */
     public static function uncomplete(int $id): void
     {
         $sql = "UPDATE tarea SET completada = 0 WHERE idTar = :id;";
         Database::init()->prepare($sql)->query([":id" => $id]);
     }
 
+            /**
+     * Completa todas las tareas asociadas a una lista específica
+     * @param int $idLis
+     * @return array
+     */
     public static function completeAll(int $idLis): void
     {
         $sql = "UPDATE tarea SET completada = 1 WHERE idLis = :idLis;";
