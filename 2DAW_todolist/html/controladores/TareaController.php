@@ -51,18 +51,21 @@ class TareaController extends BaseController
     {
         # recuperamos la tarea
         $tarea = Tarea::getById($_GET["id"]);
-
+    
         if (empty($_POST)):
             $this->render("tareas/editar.php.twig", ["tarea" => $tarea]);
         else:
-            # si estoy recibiendo información POST
-            $tarea->setFecha($_POST["fecha"]);
-            $tarea->setTexto($_POST["texto"]);
-            $tarea->setCompletada($_POST["completada"]);
-            $tarea->update(); # tell don't ask
-
-            # redirigir a la pantalla principal
-            die(header("location: http://localhost"));
+            # si estoy recibiendo información POST y solo deseas actualizar el texto
+            if (isset($_POST["nombre"])) {
+                $tarea->setTexto($_POST["nombre"]);
+                $tarea->update(); # tell don't ask
+    
+                # redirigir a la pantalla principal
+                die(header("location: http://localhost"));
+            } else {
+                # Manejo de error si falta el dato del formulario
+                die("Error: Falta el dato del formulario.");
+            }
         endif;
     }
 
@@ -81,5 +84,28 @@ class TareaController extends BaseController
     {
         Tarea::delete($_GET["id"]);
         die(header("location: http://localhost"));
+    }
+
+        /**
+     * Completa todas las tareas de una lista
+     * @return void
+     */
+    public function completeAll(): void 
+    {
+        $idLis = $_GET['id'];
+        Tarea::completeAll($idLis);
+        header("location: /tareas/$idLis");
+        exit();
+    }
+        /**
+     * Descompleta una tarea
+     * @return void
+     */
+    public function uncomplete(): void 
+    {
+        $tarea = Tarea::getById($_GET["id"]);
+        Tarea::uncomplete($_GET["id"]);
+        header("Location: /tareas/" . $tarea->getIdLis());
+        exit();
     }
 }

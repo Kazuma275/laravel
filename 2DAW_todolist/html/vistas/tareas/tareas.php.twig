@@ -13,6 +13,12 @@
         <a class="btn btn-primary mt-4 mb-4" href="/crear/tarea/{{ lista.id }}">
             <i class="bi bi-plus-circle-fill"></i> Crear Tarea
         </a>
+        <a class="btn btn-success mt-4 mb-4" href="/completar-todas/tareas/{{ lista.id }}">
+            <i class="bi bi-check-circle-fill"></i> Completar Todas
+        </a>
+        <button class="btn btn-secondary mt-4 mb-4" onclick="history.back()">
+            <i class="bi bi-arrow-left-circle-fill"></i> Retroceder
+        </button>
         <table class="table">
             <thead>
                 <tr>
@@ -33,6 +39,8 @@
                         <a href="/borrar/tarea/{{ tarea.id }}" class="btn btn-danger"><i class="bi bi-trash"></i> Borrar</a>
                         {% if not tarea.completada %}
                         <a href="/completar/tarea/{{ tarea.id }}" class="btn btn-success"><i class="bi bi-check-circle"></i> Completar</a>
+                        {% else %}
+                        <a href="/descompletar/tarea/{{ tarea.id }}" class="btn btn-secondary"><i class="bi bi-x-circle"></i> Descompletar</a>
                         {% endif %}
                     </td>
                 </tr>

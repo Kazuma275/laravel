@@ -166,4 +166,16 @@ class Tarea
         $sql = "UPDATE tarea SET completada = 1 WHERE idTar = :id;";
         Database::init()->prepare($sql)->query([":id" => $id]);
     }
+
+    public static function uncomplete(int $id): void
+    {
+        $sql = "UPDATE tarea SET completada = 0 WHERE idTar = :id;";
+        Database::init()->prepare($sql)->query([":id" => $id]);
+    }
+
+    public static function completeAll(int $idLis): void
+    {
+        $sql = "UPDATE tarea SET completada = 1 WHERE idLis = :idLis;";
+        Database::init()->prepare($sql)->query([":idLis" => $idLis]);
+    }
 }
