@@ -2,9 +2,6 @@
 
 <h1>E02 - Laravel: primeros pasos</h1> 
 
-- Apertura: lunes, 20 de enero de 2025, 00:00
-- Cierre: viernes, 24 de enero de 2025, 23:59
-
 A finales del primer trimestre tuviste que entregar y presentar en clase un proyecto
 desarrollado en PHP. Basandote en aquella idea, crea ahora un proyecto Laravel para y
 construye la base de datos utilizando migraciones. Hecho esto, se deberá poblar
