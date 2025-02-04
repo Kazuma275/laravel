@@ -20,4 +20,4 @@ Tu tarea consistirá en:
 
 Terminada la práctica, comprime la carpeta en formato ZIP, cámbiale el nombre por `todolist_xxxx.zip` donde `xxxx` son las iniciales de tu nombre y apellidos y sube el archivo a esta tarea.
 
-Para más detalles, lee [README in the E01---TodoList branch](https://github.com/Kazuma275/laravel/blob/main/README.md).
+Para más detalles, lee [README branch](https://github.com/Kazuma275/laravel/blob/main/README.md).
