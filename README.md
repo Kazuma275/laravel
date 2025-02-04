@@ -1,6 +1,6 @@
 # laravel
 
-<h1>E01 - TodoList: mvc, espacios de nombres y autocarga</h1> 
+<h1>E02 - Laravel: primeros pasos</h1> 
 
 - Apertura: lunes, 20 de enero de 2025, 00:00
 - Cierre: viernes, 24 de enero de 2025, 23:59
