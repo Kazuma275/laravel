@@ -27,4 +27,4 @@ Cualquier alteración del proyecto planteado originalmente durante el primer tri
 deberá explicarse convenientemente a la entrega de esta tarea. Recuerda añadir un
 comentario a cada script PHP generado con tu nombre y apellidos.
 
-Para más detalles, lee [README branch](https://github.com/Kazuma275/laravel-rayito-de-sol/blob/master/README.md).
+Para más detalles, lee [Repositorio Guía](https://github.com/Kazuma275/laravel-rayito-de-sol/blob/master/README.md).
