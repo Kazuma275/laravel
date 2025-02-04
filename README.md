@@ -1,5 +1,10 @@
 # laravel
 
+<h1>E01 - TodoList: mvc, espacios de nombres y autocarga</h1> 
+
+- Apertura: lunes, 20 de enero de 2025, 00:00
+- Cierre: viernes, 24 de enero de 2025, 23:59
+
 A finales del primer trimestre tuviste que entregar y presentar en clase un proyecto
 desarrollado en PHP. Basandote en aquella idea, crea ahora un proyecto Laravel para y
 construye la base de datos utilizando migraciones. Hecho esto, se deberá poblar
@@ -24,3 +29,5 @@ potenciales, perfiles, etc., y adjuntar el documento PDF en esta tarea.
 Cualquier alteración del proyecto planteado originalmente durante el primer trimestre,
 deberá explicarse convenientemente a la entrega de esta tarea. Recuerda añadir un
 comentario a cada script PHP generado con tu nombre y apellidos.
+
+Para más detalles, lee [README in the E01---TodoList branch](https://github.com/Kazuma275/laravel/blob/main/README.md).
