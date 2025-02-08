@@ -1,6 +1,6 @@
 # laravel
 
-<h1>E03---Laravel-CRD</h1> 
+<h1>E03 - Laravel: CR*D</h1> 
 
 Ahora que hemos avanzado algo mas con Laravel, y una vez tienes montada la base de
 datos de tu proyecto, toca comenzar a implementar cierta funcionalidad en la aplicación.
