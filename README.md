@@ -21,3 +21,5 @@ Github. Recuerda eliminar las carpetas mencionadas en clase que, aun siendo nece
 pueden regenerarse facilmente. Anade al profesor como colaborador del repositorio y
 entrega a través de esta tarea el enlace a dicho repositorio. Recuerda añadir un
 comentario a cada script PHP generado con tu nombre y apellidos.
+
+Para más detalles, lee [Repositorio Guía](https://github.com/Kazuma275/laravel-rayito-de-sol/blob/develop/README.md).
